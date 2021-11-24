@@ -10,12 +10,12 @@ function App() {
 
   const addDynamicInput = () => {
     setData([...data, {
-      "name": "family name",
+      "name": (Math.random() + 1).toString(36).substring(7),
       "lable": "family name",
       "type": "string"
     }]);
   }
-  
+
   return (
     <>
     <Container>
