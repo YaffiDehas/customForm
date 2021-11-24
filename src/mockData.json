@@ -1,0 +1,29 @@
+[
+    {
+    "name": "FirstName",
+    "lable": "First name",
+    "type": "string"
+    },
+    {
+      "name": "lastNmae",
+      "lable": "last name",
+      "type": "string"
+    },
+    {
+      "name": "radio",
+      "lable": "select option",
+      "options": [{"name": "Female"},{"name": "Male"}, {"name": "other"} ],
+      "type": "radio"
+    },
+    {
+      "name": "select",
+      "lable": "select",
+      "options": [{"name": "isral"},{"name": "U.S.A"}, {"name": "other"} ],
+      "type": "select"
+    },
+    {
+      "name": "checkbox",
+      "lable": "I`m not a robot",
+      "type": "checkbox"
+    }
+  ]

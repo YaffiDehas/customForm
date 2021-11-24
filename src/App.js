@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
+import CustomForm from './components/CustomForm';
+import AddInput from './components/AddInput';
+import mockData from './mockData.json';
+import './App.css'
 
 function App() {
+  const [data, setData] = useState(mockData);
+
+  const addDynamicInput = () => {
+    setData([...data, {
+      "name": "family name",
+      "lable": "family name",
+      "type": "string"
+    }]);
+  }
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Container>
+      <Row><h1>Custom  dynamic Form</h1></Row>
+      <CustomForm data={data}/>
+      <AddInput setData={addDynamicInput}/>
+    </Container>
+    </>
   );
 }
 
